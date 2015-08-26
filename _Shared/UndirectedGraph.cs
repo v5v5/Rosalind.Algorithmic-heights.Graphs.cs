@@ -6,7 +6,7 @@ namespace _Shared
 {
     internal class UndirectedGraph
     {
-        List<int>[] g;
+        internal readonly List<int>[] g;
         internal readonly int CountVertices;
 
         public UndirectedGraph(string file)
@@ -26,6 +26,7 @@ namespace _Shared
                     CountVertices = int.Parse(param[0]);
                     //int CountEdges = int.Parse(param[1]);
 
+                    g = new List<int>[CountVertices];
                     Init();
 
                     while ((line = reader.ReadLine()) != null)
@@ -52,6 +53,7 @@ namespace _Shared
         {
             CountVertices = 7;
 
+            g = new List<int>[CountVertices];
             Init();
 
             AddEdge(0, 1);
@@ -65,8 +67,7 @@ namespace _Shared
 
         private void Init()
         {
-            g = new List<int>[CountVertices];
-
+            //g = new List<int>[CountVertices];
             for (int i = 0; i < g.Length; i++)
             {
                 g[i] = new List<int>();

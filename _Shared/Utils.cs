@@ -26,7 +26,7 @@ namespace _Shared
         internal static string GetFullPathFile(string file)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            var path = Path.GetDirectoryName(assembly.Location) + "\\..\\..\\..\\Data\\" + file;
+            var path = Path.GetDirectoryName(assembly.Location) + "\\..\\..\\..\\_Data\\" + file;
             return path;
         }
 

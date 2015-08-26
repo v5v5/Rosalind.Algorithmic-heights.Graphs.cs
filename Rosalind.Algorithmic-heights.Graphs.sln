@@ -3,20 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rosalind.Algorithmic-heights.Graphs", "Rosalind.Algorithmic-heights.Graphs\Rosalind.Algorithmic-heights.Graphs.csproj", "{9870E692-3885-4C40-925A-AE3D5DAFEA6A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project1", "Project1\Project1.csproj", "{049FDB08-E81A-4AF8-B6CF-DA4743D0BE3E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project2", "Project2\Project2.csproj", "{D47CCEA1-6CC7-4187-91D8-49782B8CE74B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEG", "DEG\DEG.csproj", "{CAA05BD8-BEC0-44D1-BC76-FB9D216BF6CE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{97C6EDF0-B410-4100-9AC4-DCA3EEF432AB}"
-	ProjectSection(SolutionItems) = preProject
-		Data\rosalind_deg.txt = Data\rosalind_deg.txt
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_Shared", "_Shared\_Shared.csproj", "{6CE11E09-5217-482E-B3BB-C2EE4FE8ABCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{F2743BAE-8A5A-4E69-A327-9BC7B09051D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDEG", "DDEG\DDEG.csproj", "{BC1672CF-00A8-454A-924E-B453507C943B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,18 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9870E692-3885-4C40-925A-AE3D5DAFEA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9870E692-3885-4C40-925A-AE3D5DAFEA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9870E692-3885-4C40-925A-AE3D5DAFEA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9870E692-3885-4C40-925A-AE3D5DAFEA6A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{049FDB08-E81A-4AF8-B6CF-DA4743D0BE3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{049FDB08-E81A-4AF8-B6CF-DA4743D0BE3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{049FDB08-E81A-4AF8-B6CF-DA4743D0BE3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{049FDB08-E81A-4AF8-B6CF-DA4743D0BE3E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D47CCEA1-6CC7-4187-91D8-49782B8CE74B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D47CCEA1-6CC7-4187-91D8-49782B8CE74B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D47CCEA1-6CC7-4187-91D8-49782B8CE74B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D47CCEA1-6CC7-4187-91D8-49782B8CE74B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CAA05BD8-BEC0-44D1-BC76-FB9D216BF6CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CAA05BD8-BEC0-44D1-BC76-FB9D216BF6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAA05BD8-BEC0-44D1-BC76-FB9D216BF6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -44,6 +25,10 @@ Global
 		{6CE11E09-5217-482E-B3BB-C2EE4FE8ABCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CE11E09-5217-482E-B3BB-C2EE4FE8ABCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CE11E09-5217-482E-B3BB-C2EE4FE8ABCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC1672CF-00A8-454A-924E-B453507C943B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC1672CF-00A8-454A-924E-B453507C943B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC1672CF-00A8-454A-924E-B453507C943B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1672CF-00A8-454A-924E-B453507C943B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{049FDB08-E81A-4AF8-B6CF-DA4743D0BE3E}</ProjectGuid>
+    <ProjectGuid>{BC1672CF-00A8-454A-924E-B453507C943B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Project1</RootNamespace>
-    <AssemblyName>Project1</AssemblyName>
+    <RootNamespace>DDEG</RootNamespace>
+    <AssemblyName>DDEG</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\_Shared\Algorithms.cs">
+      <Link>Algorithms.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\UndirectedGraph.cs">
+      <Link>UndirectedGraph.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Utils.cs">
+      <Link>Utils.cs</Link>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Rosalind.Algorithmic-heights.Graphs")]
+[assembly: AssemblyTitle("DDEG")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Rosalind.Algorithmic-heights.Graphs")]
+[assembly: AssemblyProduct("DDEG")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9870e692-3885-4c40-925a-ae3d5dafea6a")]
+[assembly: Guid("bc1672cf-00a8-454a-924e-b453507c943b")]
 
 // Version information for an assembly consists of the following four values:
 //
