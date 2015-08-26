@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{97C6EDF0-B
 		Data\rosalind_deg.txt = Data\rosalind_deg.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_Shared", "_Shared\_Shared.csproj", "{6CE11E09-5217-482E-B3BB-C2EE4FE8ABCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{CAA05BD8-BEC0-44D1-BC76-FB9D216BF6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAA05BD8-BEC0-44D1-BC76-FB9D216BF6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAA05BD8-BEC0-44D1-BC76-FB9D216BF6CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CE11E09-5217-482E-B3BB-C2EE4FE8ABCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE11E09-5217-482E-B3BB-C2EE4FE8ABCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE11E09-5217-482E-B3BB-C2EE4FE8ABCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE11E09-5217-482E-B3BB-C2EE4FE8ABCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
