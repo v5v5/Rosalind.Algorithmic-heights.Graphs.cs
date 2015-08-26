@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\_Shared\Algorithms.cs">
+      <Link>Algorithms.cs</Link>
+    </Compile>
     <Compile Include="..\_Shared\UndirectedGraph.cs">
       <Link>UndirectedGraph.cs</Link>
     </Compile>

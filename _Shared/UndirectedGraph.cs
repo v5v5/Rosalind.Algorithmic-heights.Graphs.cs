@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace DEG
+namespace _Shared
 {
     internal class UndirectedGraph
     {
