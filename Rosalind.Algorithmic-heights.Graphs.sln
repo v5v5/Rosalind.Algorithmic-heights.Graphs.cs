@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{F2743BAE
 		_Data\rosalind_ddeg.txt = _Data\rosalind_ddeg.txt
 		_Data\rosalind_deg.out.txt = _Data\rosalind_deg.out.txt
 		_Data\rosalind_deg.txt = _Data\rosalind_deg.txt
+		_Data\rosalind_gs.out.txt = _Data\rosalind_gs.out.txt
+		_Data\rosalind_gs.txt = _Data\rosalind_gs.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDEG", "DDEG\DDEG.csproj", "{BC1672CF-00A8-454A-924E-B453507C943B}"
