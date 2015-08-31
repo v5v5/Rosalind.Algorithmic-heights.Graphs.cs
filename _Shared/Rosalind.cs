@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace _Shared
 {
@@ -38,26 +34,36 @@ namespace _Shared
         public static int[] _2Satisfiability(DirectedGraph g)
         {
             MetaGraph m = new MetaGraph(g);
-//            return m.id;
+            //return m.stack.ToArray();
+
+            //m.id.Length ~ m.stack.Count
+            //m.id[2 * i + 1] ~ m.stack.ElementAt()
 
             for (int i = 0; i < m.id.Length / 2; i++)
+            //for (int i = 0; i < m.stack.Count / 2; i++)
             {
                 // if not solving
                 if (m.id[2 * i] == m.id[2 * i + 1])
+                //if (m.stack.ElementAt(2 * i) == m.stack.ElementAt(2 * i + 1))
                 {
                     return new int[1] { 0 };
                 }
             }
 
             int[] res = new int[m.id.Length / 2 + 1];
+            //int[] res = new int[m.stack.Count / 2 + 1];
 
             res[0] = 1;
 
+            // see Algorithms by Dasgupta, Papadimitriou, Vazirani. McGraw-Hill. 2006, page 102, task 3.28
             for (int i = m.id.Length; i > 0; i--)
+            //for (int i = m.stack.Count; i > 0; i--)
             {
                 for (int v = 0; v < m.id.Length; v++)
+                //for (int v = 0; v < m.stack.Count; v++)
                 {
                     if (m.id[v] != i)
+                    //if (m.stack.ElementAt(v) != i)
                     {
                         continue;
                     }

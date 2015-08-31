@@ -9,11 +9,12 @@ namespace _Shared
         public readonly int[] id;
         public readonly int count;
 
-        private readonly bool[] marked;
-        private Stack<int> stack = new Stack<int>();
+        private bool[] marked;
+        public readonly Stack<int> stack = new Stack<int>();
 
         public MetaGraph(DirectedGraph g)
         {
+            // do dfs on graph
             this.g = g;
 
             int l = this.g.g.Length;
@@ -29,6 +30,7 @@ namespace _Shared
                 Dfs(v);
             }
 
+            // do dfs on reverse (transposed) graph
             this.g = Algorithms.CreateReverseGraph(this.g);
 
             for (int i = 0; i < marked.Length; i++)
@@ -36,9 +38,10 @@ namespace _Shared
                 marked[i] = false;
             }
 
-            while(stack.Count != 0)
+            //while(stack.Count != 0)
+            foreach(int v in stack)
             {
-                int v = stack.Pop();
+                //int v = stack.Pop();
                 if (marked[v])
                 {
                     continue;
@@ -47,6 +50,7 @@ namespace _Shared
                 count++;
             }
 
+            this.g = g;
         }
 
         private void Dfs(int v)
