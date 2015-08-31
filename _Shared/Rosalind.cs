@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace _Shared
 {
@@ -86,6 +87,19 @@ namespace _Shared
             }
 
             return res;
+        }
+
+        public static int ReachableFrom(DirectedGraph g)
+        {
+            for (int i = 0; i < g.g.Length; i++)
+            {
+                Algorithms.Dfs dfs = new Algorithms.Dfs(g, i);
+                if (dfs.GetResult())
+                {
+                    return i + 1;
+                }
+            }
+            return -1;
         }
     }
 }

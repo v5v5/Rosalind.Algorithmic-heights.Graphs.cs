@@ -16,9 +16,10 @@ namespace _Shared
 
         internal static DirectedGraph CreateReverseGraph(DirectedGraph g)
         {
-            DirectedGraph ng = new DirectedGraph(g.CountVertices);
+            var countVerices = g.g.Length;
+            DirectedGraph ng = new DirectedGraph(countVerices);
 
-            for (int v = 0; v < g.CountVertices; v++)
+            for (int v = 0; v < countVerices; v++)
             {
                 foreach (int n in g.g[v])
                 {
@@ -27,6 +28,47 @@ namespace _Shared
             }
 
             return ng;
+        }
+
+        
+
+        public class Dfs
+        {
+            private bool[] marked;
+
+            public Dfs(DirectedGraph g, int v)
+            {
+                marked = new bool[g.g.Length];
+
+                dfs(g, v);
+            }
+ 
+            private void dfs(DirectedGraph g, int v)
+            {
+                if (marked[v])
+                {
+                    return;
+                }
+
+                marked[v] = true;
+
+                foreach (int w in g.g[v])
+                {
+                    dfs(g, w);
+                }
+            }
+
+            public bool GetResult()
+            {
+                for (int i = 0; i < marked.Length; i++)
+                {
+                    if (marked[i] == false)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
         }
     }
 }

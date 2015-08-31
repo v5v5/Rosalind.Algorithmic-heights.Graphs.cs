@@ -10,7 +10,6 @@ namespace _Shared
     public class DirectedGraph
     {
         public readonly List<int>[] g;
-        public readonly int CountVertices;
 
         public DirectedGraph(string file)
         {
@@ -26,7 +25,7 @@ namespace _Shared
 
                     string[] param = line.Split(' ');
 
-                    CountVertices = int.Parse(param[0]);
+                    int CountVertices = int.Parse(param[0]);
                     //int CountEdges = int.Parse(param[1]);
 
                     g = new List<int>[CountVertices];
@@ -54,9 +53,7 @@ namespace _Shared
 
         public DirectedGraph()
         {
-            CountVertices = 7;
-
-            g = new List<int>[CountVertices];
+            g = new List<int>[7];
             Init();
 
             AddEdge(0, 1);
@@ -70,8 +67,7 @@ namespace _Shared
 
         public DirectedGraph(int countVertices)
         {
-            CountVertices = countVertices;
-            g = new List<int>[CountVertices];
+            g = new List<int>[countVertices];
             Init();
         }
 

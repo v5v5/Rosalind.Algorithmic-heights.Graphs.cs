@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDEG", "DDEG\DDEG.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2SAT", "2SAT\2SAT.csproj", "{55071811-E61D-4D10-9569-179B8068F083}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GS", "GS\GS.csproj", "{F726F26B-F059-4A46-BD6F-F2231B6BC1D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{55071811-E61D-4D10-9569-179B8068F083}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55071811-E61D-4D10-9569-179B8068F083}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55071811-E61D-4D10-9569-179B8068F083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F726F26B-F059-4A46-BD6F-F2231B6BC1D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F726F26B-F059-4A46-BD6F-F2231B6BC1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F726F26B-F059-4A46-BD6F-F2231B6BC1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F726F26B-F059-4A46-BD6F-F2231B6BC1D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
