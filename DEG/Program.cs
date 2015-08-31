@@ -17,9 +17,7 @@ namespace DEG
             int[] res = Rosalind.GetVerticesDegree(g);
 
             Utils.PrintArrayToFile(res, file + ".out.txt");
-
-            Console.Write("Finish.");
-            Console.ReadKey();
+            Utils.Finish();
         }
     }
 }

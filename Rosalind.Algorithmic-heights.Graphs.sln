@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{F2743BAE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDEG", "DDEG\DDEG.csproj", "{BC1672CF-00A8-454A-924E-B453507C943B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2SAT", "2SAT\2SAT.csproj", "{55071811-E61D-4D10-9569-179B8068F083}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{BC1672CF-00A8-454A-924E-B453507C943B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC1672CF-00A8-454A-924E-B453507C943B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC1672CF-00A8-454A-924E-B453507C943B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55071811-E61D-4D10-9569-179B8068F083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55071811-E61D-4D10-9569-179B8068F083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55071811-E61D-4D10-9569-179B8068F083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55071811-E61D-4D10-9569-179B8068F083}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

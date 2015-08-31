@@ -35,5 +35,51 @@ namespace _Shared
             return res;
         }
 
+        public static int[] _2Satisfiability(DirectedGraph g)
+        {
+            MetaGraph m = new MetaGraph(g);
+//            return m.id;
+
+            for (int i = 0; i < m.id.Length / 2; i++)
+            {
+                // if not solving
+                if (m.id[2 * i] == m.id[2 * i + 1])
+                {
+                    return new int[1] { 0 };
+                }
+            }
+
+            int[] res = new int[m.id.Length / 2 + 1];
+
+            res[0] = 1;
+
+            for (int i = m.id.Length; i > 0; i--)
+            {
+                for (int v = 0; v < m.id.Length; v++)
+                {
+                    if (m.id[v] != i)
+                    {
+                        continue;
+                    }
+                    if (res[v / 2 + 1] != 0)
+                    {
+                        continue;
+                    }
+
+                    int r;
+                    if (v % 2 == 0)
+                    {
+                        r = (v + 2) / (+2);
+                    }
+                    else
+                    {
+                        r = (v + 1) / (-2);
+                    }
+                    res[v / 2 + 1] = r;
+                }
+            }
+
+            return res;
+        }
     }
 }
