@@ -43,20 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\_Shared\Algorithms.cs">
-      <Link>Algorithms.cs</Link>
-    </Compile>
-    <Compile Include="..\_Shared\UndirectedGraph.cs">
-      <Link>UndirectedGraph.cs</Link>
-    </Compile>
-    <Compile Include="..\_Shared\Utils.cs">
-      <Link>Utils.cs</Link>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\_Shared\_Shared.csproj">
+      <Project>{6ce11e09-5217-482e-b3bb-c2ee4fe8abcc}</Project>
+      <Name>_Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

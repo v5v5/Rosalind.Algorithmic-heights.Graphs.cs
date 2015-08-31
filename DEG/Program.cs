@@ -14,7 +14,7 @@ namespace DEG
             string file = "rosalind_deg";
             UndirectedGraph g = new UndirectedGraph(file + ".txt");
 
-            int[] res = Algorithms.GetVerticesDegree(g);
+            int[] res = Rosalind.GetVerticesDegree(g);
 
             Utils.PrintArrayToFile(res, file + ".out.txt");
 

@@ -4,10 +4,10 @@ using System.IO;
 
 namespace _Shared
 {
-    internal class UndirectedGraph
+    public class UndirectedGraph
     {
-        internal readonly List<int>[] g;
-        internal readonly int CountVertices;
+        public readonly List<int>[] g;
+        public readonly int CountVertices;
 
         public UndirectedGraph(string file)
         {
@@ -80,9 +80,5 @@ namespace _Shared
             g[v2].Add(v1);
         }
 
-        internal int Degree(int v)
-        {
-            return g[v].Count;
-        }
     }
 }

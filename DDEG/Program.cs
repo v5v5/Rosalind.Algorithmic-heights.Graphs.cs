@@ -14,7 +14,7 @@ namespace DDEG
             string file = "rosalind_ddeg";
             UndirectedGraph g = new UndirectedGraph(file + ".txt");
 
-            int[] res = Algorithms.GetSumNeighborsDegree(g);
+            int[] res = Rosalind.GetSumNeighborsDegree(g);
 
             Utils.PrintArrayToFile(res, file + ".out.txt");
 

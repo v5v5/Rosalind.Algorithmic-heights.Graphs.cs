@@ -4,9 +4,9 @@ using System.Reflection;
 
 namespace _Shared
 {
-    internal class Utils
+    public class Utils
     {
-        internal static void PrintArrayToFile(int[] a, string file)
+        public static void PrintArrayToFile(int[] a, string file)
         {
             var path = GetFullPathFile(file);
 
@@ -23,7 +23,7 @@ namespace _Shared
             }
         }
 
-        internal static string GetFullPathFile(string file)
+        public static string GetFullPathFile(string file)
         {
             var assembly = Assembly.GetExecutingAssembly();
             var path = Path.GetDirectoryName(assembly.Location) + "\\..\\..\\..\\_Data\\" + file;

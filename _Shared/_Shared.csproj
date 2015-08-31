@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Algorithms.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rosalind.cs" />
     <Compile Include="UndirectedGraph.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
