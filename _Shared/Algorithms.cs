@@ -34,7 +34,7 @@ namespace _Shared
 
         public class Dfs
         {
-            private bool[] marked;
+            public readonly bool[] marked;
 
             public Dfs(DirectedGraph g, int v)
             {
@@ -69,6 +69,130 @@ namespace _Shared
                 }
                 return true;
             }
+        }
+
+        internal class FloydWarshal
+        {
+            public readonly int[,] dist;
+
+            public FloydWarshal(DirectedGraph g)
+            {
+                int countVertices = g.g.Length;
+                dist = new int[countVertices, countVertices];
+                for (int i = 0; i < countVertices; i++)
+                {
+                    for (int j = 0; j < countVertices; j++)
+                    {
+                        dist[i, j] = Int32.MaxValue / 4;
+                    }
+                }
+
+                for (int i = 0; i < countVertices; i++)
+                {
+                    dist[i, i] = 0;
+                }
+
+                for (int i = 0; i < countVertices; i++)
+                {
+                    foreach (int v in g.g[i])
+                    {
+                        dist[i, v] = 1;
+                    }
+                }
+
+                for (int k = 0; k < countVertices; k++)
+                {
+                    for (int i = 0; i < countVertices; i++)
+                    {
+                        for (int j = 0; j < countVertices; j++)
+                        {
+                            dist[i, j] = Math.Min(dist[i, j], dist[i, k] + dist[k, j]);
+                            //if (dist[i,j] > dist[i,k] + dist[k,j])
+                            //{
+                            //    dist[i,j] = dist[i,k] + dist[k,j];
+                            //}
+                        }
+                    }
+                }
+            }
+        }
+
+        // StrongConnectedComponent
+        public class SCC
+        {
+            private DirectedGraph g;
+            private bool[] marked;
+            public readonly Stack<int> stack = new Stack<int>();
+
+            public SCC(DirectedGraph g)
+            {
+                // do dfs on graph
+                this.g = g;
+
+                int l = this.g.g.Length;
+                marked = new bool[l];
+
+                for (int v = 0; v < g.g.Length; v++)
+                {
+                    if (marked[v])
+                    {
+                        continue;
+                    }
+                    Dfs(v);
+                }
+
+                // do dfs on reverse (transposed) graph
+                this.g = Algorithms.CreateReverseGraph(this.g);
+
+                for (int i = 0; i < marked.Length; i++)
+                {
+                    marked[i] = false;
+                }
+
+                //while(stack.Count != 0)
+                foreach (int v in stack)
+                {
+                    //int v = stack.Pop();
+                    if (marked[v])
+                    {
+                        continue;
+                    }
+                    DfsReverse(v);
+                }
+
+                this.g = g;
+            }
+
+            private void Dfs(int v)
+            {
+                marked[v] = true;
+
+                foreach (int w in g.g[v])
+                {
+                    if (marked[w])
+                    {
+                        continue;
+                    }
+                    Dfs(w);
+                }
+
+                stack.Push(v);
+            }
+
+            private void DfsReverse(int v)
+            {
+                marked[v] = true;
+
+                foreach (int w in g.g[v])
+                {
+                    if (marked[w])
+                    {
+                        continue;
+                    }
+                    DfsReverse(w);
+                }
+            }
+
         }
     }
 }

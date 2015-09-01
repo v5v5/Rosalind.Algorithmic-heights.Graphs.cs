@@ -94,12 +94,94 @@ namespace _Shared
             for (int i = 0; i < g.g.Length; i++)
             {
                 Algorithms.Dfs dfs = new Algorithms.Dfs(g, i);
-                if (dfs.GetResult())
+                //if (dfs.GetResult())
+                //{
+                //    return i + 1;
+                //}
+
+                bool res = true;
+                for (int j = 0; j < dfs.marked.Length; j++)
+                {
+                    if (dfs.marked[j] == false)
+                    {
+                        res = false;
+                        break;
+                    }
+                }
+                if (res)
                 {
                     return i + 1;
                 }
             }
             return -1;
+        }
+
+        public static int SemiConnected0(DirectedGraph g)
+        {
+            Algorithms.FloydWarshal fw = new Algorithms.FloydWarshal(g);
+
+            int il = fw.dist.GetLength(0);
+            int jl = fw.dist.GetLength(1);
+
+            //for (int i = 0; i < il; i++)
+            //{
+            //    for (int j = 0; j < jl; j++)
+            //    {
+            //        Console.Write(fw.dist[i, j] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
+            //Console.WriteLine();
+
+            bool res;
+            for (int i = 0; i < il; i++)
+            {
+                res = true;
+                for (int j = 0; j < jl; j++)
+                {
+                    if (fw.dist[i,j] == Int32.MaxValue / 4)
+                    {
+                        res = false;
+                        break;
+                    }
+                }
+                if (res)
+                {
+                    return 1;
+                }
+            }
+            return -1;
+        }
+
+        public static int SemiConnected1(DirectedGraph g)
+        {
+            // http://himangi774.blogspot.ru/2013/12/check-if-graph-is-strongl-connected.html
+
+            Algorithms.SCC scc = new Algorithms.SCC(g);
+
+            //foreach (var v in scc.stack)
+            //{
+            //    Console.Write(v + " ");
+            //}
+            //Console.WriteLine();
+            //while (scc.stack.Count != 0)
+            //{
+            //    Console.Write(scc.stack.Pop() + " ");
+            //}
+            //Console.WriteLine();
+
+            var prev = scc.stack.Pop();
+            while (scc.stack.Count != 0)
+            {
+                var curr = scc.stack.Pop();
+                if (curr != prev - 1)
+                {
+                    return -1;
+                }
+                prev = curr;
+            }
+
+            return 1;
         }
     }
 }
