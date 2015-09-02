@@ -17,6 +17,57 @@ namespace _Shared
             return res;
         }
 
+        public static string[] ShortestPathsInDAG(DirectedWeightedGraph g, int from)
+        {
+            // Algorithms by Dasgupta, Papadimitriou, Vazirani. McGraw-Hill. 2006 Chapter 4.7. page 119
+            int countVerices = g.g.Length;
+            int[] dist = new int[countVerices];
+
+            for (int i = 0; i < dist.Length; i++)
+            {
+                dist[i] = Int32.MaxValue / 4;
+            }
+            dist[from] = 0;
+
+            Algorithms.TopologicalSorting ts = new Algorithms.TopologicalSorting(g);
+
+            int[] order = ts.GetResult();
+
+            //for (int u = 0; u < a.Length; u++)
+            //{
+            //    Console.WriteLine(a[u] + " ");
+            //}
+            //return new string[1] { "x" };
+
+            for (int i = 0; i < order.Length; i++)
+            {
+                foreach (var e in g.g[order[i]])
+                {
+                    if ((dist[order[i]] == Int32.MaxValue / 4) && (dist[e.neighbor] == Int32.MaxValue / 4))
+                    {
+                        continue;
+                    }
+                    dist[e.neighbor] = Math.Min(dist[e.neighbor], dist[order[i]] + e.weight);
+                }
+            }
+
+            // convert "infinite" to "x"
+            string[] res = new string[dist.Length];
+            for (int u = 0; u < countVerices; u++)
+            {
+                if (dist[u] == Int32.MaxValue / 4)
+                {
+                    res[u] = "x";
+                }
+                else
+                {
+                    res[u] = dist[u].ToString();
+                }
+            }
+
+            return res;
+        }
+
         static public int[] GetSumNeighborsDegree(UndirectedGraph g)
         {
             int[] res = new int[g.CountVertices];

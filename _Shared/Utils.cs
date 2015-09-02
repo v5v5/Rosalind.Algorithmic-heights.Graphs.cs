@@ -23,6 +23,23 @@ namespace _Shared
             }
         }
 
+        public static void PrintArrayToFile(string[] a, string file)
+        {
+            var path = GetFullPathFile(file);
+
+            using (StreamWriter writer = new StreamWriter(path))
+            {
+                for (int i = 0; i < a.Length; i++)
+                {
+                    if (i != 0)
+                    {
+                        writer.Write(" ");
+                    }
+                    writer.Write(a[i]);
+                }
+            }
+        }
+
         public static void PrintArraysToFile(int[][] a, string file)
         {
             var path = GetFullPathFile(file);

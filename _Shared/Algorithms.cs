@@ -30,7 +30,52 @@ namespace _Shared
             return ng;
         }
 
-        
+        public class TopologicalSorting
+        {
+            bool[] marked;
+            Stack<int> reversePost = new Stack<int>();
+
+            public TopologicalSorting(DirectedWeightedGraph g)
+            {
+                int countVertices = g.g.Length;
+                marked = new bool[countVertices];
+
+                for (int v = 0; v < countVertices; v++)
+                {
+                    Dfs(g, v);
+                }
+            }
+
+            private void Dfs(DirectedWeightedGraph g, int v)
+            {
+                if (marked[v])
+                {
+                    return;
+                }
+
+                marked[v] = true;
+
+                foreach (Neighbor n in g.g[v])
+                {
+                    Dfs(g, n.neighbor);
+                }
+
+                reversePost.Push(v);
+            }
+
+            public int[] GetResult()
+            {
+                int[] r = new int[reversePost.Count];
+                int i = 0;
+                while (reversePost.Count != 0)
+                {
+                    r[i] = reversePost.Pop();
+                    i++;
+                }
+
+                return r;
+            }
+        }
 
         public class Dfs
         {
